@@ -1,0 +1,227 @@
+\documentclass{scrartcl}
+\usepackage{amsmath}
+\usepackage{units}
+\begin{document}
+\title{Meinel: Relativistische Physik}
+\maketitle
+% 44 leute
+% seminar freitag 14:15-16 seminar 102 abbeanum
+% erster seminar termin ist vorlesung
+
+% klausur zum schluss, zulassung zur klausur nur bei regelmaessiger
+% teilnahme an uebungen, aufgaben werden nicht kontrolliert in der
+% uebung von uns vorgestellt, stephan valenta
+\section{Literatur}
+Drei Buecher an die er sich besonders stark anlehnt
+
+\begin{itemize}
+\item J.B.~Hartle ``Gravity'', Add.~Wesley 2003
+\item Landau/Lifschitz, Band~II
+\item H. Stephani, ``Relativity'', Cambridge Univ.\ Press 2004
+\end{itemize}
+
+\section{Einfuehrung in die spezielle Relativitaetstheorie}
+\subsection{Das Relativitaetsprinzip der klassischen Mechanik}
+\begin{quote}
+  Fuehrt man identische experimente in unterschiedlichen
+  Inertialsystemen durch, erhaelt man identische Resultate.
+\end{quote}
+
+Uebergang von einem Inertialsystem $\Sigma(x,y,z)$ zu einem anderen
+$\Sigma'(x',y',z')$:
+Koordinatentransformation
+
+\paragraph{Beispiele:}
+\begin{enumerate}
+\item Verschiebung entlang der x-Achse.
+  \begin{align}
+    x'&=x-d, \quad d=\textrm{const.}\\
+    y'&=y\\
+    z'&=z\\
+    (t'&=t)
+\end{align}
+
+
+
+\begin{verbatim}
+ | y         |  y'
+ |           |
+ |           |
+ |           |
+ |           |
+ |    d      |
+ +---------->+
+ |           |
+ |           |
+ |           |
+ |           |
+ |           |
+ +-----------+----------------------------------------      x, x'
+\end{verbatim}
+
+\item Drehung  um die z-Achse
+
+
+\begin{verbatim}
+                           |
+            \              |
+             \-            |
+               \           |                            /-   x'
+                \-         |                        /---
+                  \        |                    /---
+                   \-      |                /---
+                     \     |             /--
+                      \-   |         /---
+                        \  |     /---
+                         \-| /---          phi
+ ------------------------/-\----------------------------------------------- x
+                      /--  | \
+                  /---     |  \-
+              /---         |    \
+          /---             |     \-
+        --                 |       \
+                           |        \-
+                           |          \
+                           |           \-
+                                         \
+\end{verbatim}
+
+\begin{align}
+  x'&=\cos(\phi) x + \sin(\phi) y, \quad \phi=\textrm{const.} \\
+  y'&=-\sin(\phi) x + \cos(\phi) y \\
+  z'&=z \\
+  (t'&=t)
+\end{align}
+
+\item Gleichfoermige Bewegung entland der x-Achse
+
+\begin{align}
+  x'&=x-vt,\quad v=\textrm{const.}\\
+  y'&=y \\
+  z'&=z \\
+  t'&=t
+\end{align}
+Galileitransformation
+
+\begin{verbatim}
+  | y         |  y'
+  |           |
+  |           |
+  |           |
+  |           |
+  |    vt     |
+  +---------->+
+  |           |
+  |           |
+  |           |
+  |           |
+  |           |
+  +-----------+----------------------------------------      x, x'
+\end{verbatim}
+
+
+\end{enumerate}
+
+(1) und (2) sind rein raeumliche Transformationen aber auch bei (3)
+wird die Zeit nicht transformiert (``absolute Zeit'')!
+
+Fuer ein kraeftefreies Teilchen gilt gemaess 1. Axiom:
+\begin{align}
+  x_{,t^2}&=0, y_{,t^2}=0, y_{,t^2}=0 \\
+  (d,\phi,v)=\textrm{const.}\\
+  \rightarrow
+  x'_{,t^2}&=0, y'_{,t^2}=0, y'_{,t^2}=0
+\end{align}
+
+\renewcommand{\d}{\textrm{d}}
+
+\paragraph{Bemerkung}
+Die zugrundeliegende Geometrie des euklidischen Raums wird in
+kartesischen Koordinaten durch das ``Linienelement'' $\d S^2=(\d
+S)^2=\d x^2+ \d y^2 + \d z^2$ charakterisiert (Satz des Pythagoras).
+
+Die Form $\d S^2$ ist invariant bei Verschiebungen und Drehungen:
+\begin{align}
+  \d S^2=\d x^2+ \d y^2 + \d z^2=\d x'^2+ \d y'^2 + \d z'^2
+\end{align}
+Aufgrund der Symmetrieeigenschaften des euklidischen Raums.
+
+\paragraph{Beweis}
+(1) trivial
+
+(2)
+\begin{align}
+  \d x'&=\cos(\phi) \d x + \sin(\phi) \d y \\
+  \d y'&=-\sin(\phi) \d x + \cos(\phi) \d y \\
+  \rightarrow \d x'^2 + \d y'^2 = \d x^2 + \d y^2
+\end{align}
+
+(3) ist fuer fixiertes $t$ auch eine Verschiebung
+
+\subsection*{Addition von Geschwindigkeiten}
+Fuer eine Galilei-Transformation gilt:
+
+\begin{align}
+  V'&=x'_{,t'} = x'_{,t} = V = x_{,t} - v \\
+  y'_{,t'} &= y'_{,t} \\
+  z'_{,t'} &= z'_{,t}
+\end{align}
+
+Ein Teilchen, das sich im System $\Sigma'$ mit einer Geschwindigkeit
+$V'$ in $x'-$Richtung bewegt, bewegt sich also im System $\Sigma$ mit
+einer Geschwindigkeit
+\begin{align}
+\label{eqn:addition-geschwindigkeiten}
+  V = V' + v
+\end{align}
+in $x-$Richtung
+
+
+
+
+\begin{verbatim}
+              +------------------------------+
+              |                              |
+              |                              |
+              |    o  --->  V'               |   ----> v
+              |                              |
+              |                              |
+              |                              |
+              +------------------------------+
+                    o                    o
+ ------------------------------------------------------------
+\end{verbatim}
+
+\section{Konstanz der Lichtgeschwindigkeit}
+
+\paragraph{Frage:}
+Gilt das Relativitaetsprinzip (R) auch fuer nicht-mechanische Vorg\"ange,
+z.\ B.\ elektromagnetische Erscheinungen inklusive Lichtausbreitung?
+
+\paragraph{Experimenteller Befund:}
+Die Vakuum-Lichtgeschwindigkeit hat in allen Inertialsystemen den
+exakten Wert $c=\unit[299792.458]{\textrm{km}/\textrm{s}}$.
+
+Versuch von Michelson \& Morley 1887 (unabhaengig von der
+Geschwindigkeit der Lichtquelle)
+
+\paragraph{Problem:}
+\ref{eqn:addition-geschwindigkeiten}
+
+
+\paragraph{Antwort:} Ja!
+
+\paragraph{Konsequenz:} Galilei-Transformation und damit klassische (=
+Newtonsche) Mechanik sind falsch!!  (Genauer: sind nur
+n\"aherungsweise g\"ultig f\"ur Geschwindigkeiten $<< c$)
+
+
+
+\end{document}
+
+
+
+
+
+
+
